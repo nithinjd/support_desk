@@ -1,0 +1,31 @@
+{
+    "status": "INSUFFICIENT_EVIDENCE",
+    "tenant": "Atlas",
+    "role": "employee",
+    "as_of": "2026-09-21",
+    "requested_benefit": "WELLNESS",
+    "requested_benefit_raw": "What wellness benefit am I entitled to?",
+    "answer": null,
+    "amount": null,
+    "currency": null,
+    "citations": [],
+    "reason": "No Approved Atlas/employee policy covering WELLNESS is in force on 2026-09-21.",
+    "conflicting_amounts": null,
+    "diagnostics": {
+        "benefit": "WELLNESS",
+        "excluded_candidates": [],
+        "note": "These passages mention the benefit but failed at least one filter."
+    },
+    "issues": [
+        {
+            "code": "NO_APPLICABLE_POLICY",
+            "category": "POLICY_LIMITATION",
+            "message": "No approved policy covering this request is in force for the caller on the evaluation date.",
+            "detail": "benefit=WELLNESS, tenant=Atlas, role=employee, as_of=2026-09-21."
+        }
+    ],
+    "review_required": true,
+    "decision": "NO_DECISION",
+    "payment_initiated": false,
+    "decision_note": "This service returns policy information only. It does not approve, deny, or pay claims, and no payment is ever initiated."
+}

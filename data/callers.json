@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "callers": [
+    {
+      "caller_id": "atlas-employee-01",
+      "tenant": "Atlas",
+      "role": "employee"
+    },
+    {
+      "caller_id": "atlas-contractor-01",
+      "tenant": "Atlas",
+      "role": "contractor"
+    },
+    {
+      "caller_id": "boreal-employee-01",
+      "tenant": "Boreal",
+      "role": "employee"
+    }
+  ]
+}

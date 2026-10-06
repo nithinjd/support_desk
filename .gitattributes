@@ -1,0 +1,24 @@
+# Normalise text in the repo, check out native line endings.
+* text=auto
+
+# ---------------------------------------------------------------------------
+# Fixture files whose EXACT BYTES are part of the contract
+# ---------------------------------------------------------------------------
+# request-06.txt must be a byte-for-byte copy of request-01.txt, request-08.txt
+# must be exactly 0 bytes, and request-02.pdf is binary. Line-ending conversion
+# would change their bytes - and silently corrupt the PDF - so it is disabled
+# for this whole directory.
+data/requests/** -text
+
+# Any other PDF is binary too.
+*.pdf -text
+
+# ---------------------------------------------------------------------------
+# Scripts
+# ---------------------------------------------------------------------------
+# Shell scripts need LF or they fail to run on Linux and macOS.
+*.sh text eol=lf
+mvnw text eol=lf
+
+# Windows batch files need CRLF.
+*.cmd text eol=crlf

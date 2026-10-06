@@ -1,0 +1,45 @@
+{
+    "status": "ANSWERED",
+    "tenant": "Atlas",
+    "role": "contractor",
+    "as_of": "2026-09-21",
+    "requested_benefit": "CERTIFICATION",
+    "requested_benefit_raw": "What is my certification reimbursement limit?",
+    "answer": "The annual certification reimbursement limit for contractors is INR 10000.",
+    "amount": 10000.0,
+    "currency": "INR",
+    "citations": [
+        {
+            "chunk_id": "atlas-cert-contractor",
+            "quote": "The annual certification reimbursement limit for contractors is INR 10000.",
+            "tenant": "Atlas",
+            "role": "contractor",
+            "approval_state": "Approved",
+            "effective_from": "2026-06-01",
+            "effective_to": "2027-01-01",
+            "amount": 10000.0,
+            "currency": "INR"
+        }
+    ],
+    "reason": "1 Approved Atlas/contractor policy in force on 2026-09-21 for CERTIFICATION; stated limit INR 10000.",
+    "conflicting_amounts": null,
+    "diagnostics": null,
+    "issues": [
+        {
+            "code": "LIMIT_NOT_BALANCE_OR_ELIGIBILITY",
+            "category": "POLICY_LIMITATION",
+            "message": "An annual policy limit does not establish remaining balance or expense eligibility.",
+            "detail": "The figure quoted is the annual cap only. Year-to-date usage, the remaining balance, and whether this particular expense qualifies are all outside the policy corpus and must be confirmed separately."
+        },
+        {
+            "code": "EXPENSE_ELIGIBILITY_NOT_DETERMINED",
+            "category": "POLICY_LIMITATION",
+            "message": "Whether the specific expense claimed is eligible under the quoted policy has not been determined and requires human assessment.",
+            "detail": null
+        }
+    ],
+    "review_required": true,
+    "decision": "NO_DECISION",
+    "payment_initiated": false,
+    "decision_note": "This service returns policy information only. It does not approve, deny, or pay claims, and no payment is ever initiated."
+}

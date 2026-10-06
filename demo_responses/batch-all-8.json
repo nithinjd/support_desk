@@ -1,0 +1,862 @@
+{
+    "batch_id": "demo-batch-001",
+    "caller_id": "atlas-employee-01",
+    "tenant": "Atlas",
+    "role": "employee",
+    "as_of": "2026-09-21",
+    "summary": {
+        "total": 8,
+        "completed": 7,
+        "failed": 1
+    },
+    "review_required": true,
+    "decision": "NO_DECISION",
+    "payment_initiated": false,
+    "decision_note": "This service returns policy information only. It does not approve, deny, or pay claims, and no payment is ever initiated. Every item requires human review.",
+    "results": [
+        {
+            "document_id": "request-01",
+            "filename": "request-01.txt",
+            "processing_status": "COMPLETED",
+            "review_required": true,
+            "decision": "NO_DECISION",
+            "payment_initiated": false,
+            "sha256": "7193f1e4ada48109d0c459646996a832c88468d7342a6ba089f3a166f853c3ef",
+            "size_bytes": 188,
+            "duplicate_of": null,
+            "injection_suspected": false,
+            "extracted": {
+                "benefit": "CERTIFICATION",
+                "amount": 18000.0,
+                "currency": "INR",
+                "reference": "CERT-101"
+            },
+            "field_evidence": {
+                "benefit": {
+                    "quote": "I request certification reimbursement of INR 18000 for a completed cloud certification. Please tell me the applicable annual limit and whether this request can be paid."
+                },
+                "amount": {
+                    "quote": "I request certification reimbursement of INR 18000 for a completed cloud certification. Please tell me the applicable annual limit and whether this request can be paid."
+                },
+                "currency": {
+                    "quote": "I request certification reimbursement of INR 18000 for a completed cloud certification. Please tell me the applicable annual limit and whether this request can be paid."
+                },
+                "reference": {
+                    "quote": "Reference:\nCERT-101"
+                }
+            },
+            "extraction_diagnostics": {
+                "source_kind": "txt",
+                "filename": "request-01.txt",
+                "byte_count": 188,
+                "char_count": 188,
+                "text_extracted": true,
+                "amount_candidates": [
+                    18000.0
+                ],
+                "amount_conflict": false,
+                "manager_approval": "UNKNOWN",
+                "already_booked": false,
+                "injection_suspected": false,
+                "injection_signals": [],
+                "notes": []
+            },
+            "policy": {
+                "status": "ANSWERED",
+                "tenant": "Atlas",
+                "role": "employee",
+                "as_of": "2026-09-21",
+                "requested_benefit": "CERTIFICATION",
+                "requested_benefit_raw": "CERTIFICATION",
+                "answer": "The annual certification reimbursement limit for employees is INR 25000.",
+                "amount": 25000.0,
+                "currency": "INR",
+                "citations": [
+                    {
+                        "chunk_id": "atlas-cert-current",
+                        "quote": "The annual certification reimbursement limit for employees is INR 25000.",
+                        "tenant": "Atlas",
+                        "role": "employee",
+                        "approval_state": "Approved",
+                        "effective_from": "2026-06-01",
+                        "effective_to": "2027-01-01",
+                        "amount": 25000.0,
+                        "currency": "INR"
+                    }
+                ],
+                "reason": "1 Approved Atlas/employee policy in force on 2026-09-21 for CERTIFICATION; stated limit INR 25000.",
+                "conflicting_amounts": null,
+                "diagnostics": null,
+                "issues": [
+                    {
+                        "code": "LIMIT_NOT_BALANCE_OR_ELIGIBILITY",
+                        "category": "POLICY_LIMITATION",
+                        "message": "An annual policy limit does not establish remaining balance or expense eligibility.",
+                        "detail": "The figure quoted is the annual cap only. Year-to-date usage, the remaining balance, and whether this particular expense qualifies are all outside the policy corpus and must be confirmed separately."
+                    },
+                    {
+                        "code": "EXPENSE_ELIGIBILITY_NOT_DETERMINED",
+                        "category": "POLICY_LIMITATION",
+                        "message": "Whether the specific expense claimed is eligible under the quoted policy has not been determined and requires human assessment.",
+                        "detail": null
+                    }
+                ],
+                "review_required": true,
+                "decision": "NO_DECISION",
+                "payment_initiated": false,
+                "decision_note": "This service returns policy information only. It does not approve, deny, or pay claims, and no payment is ever initiated."
+            },
+            "issues": [
+                {
+                    "code": "LIMIT_NOT_BALANCE_OR_ELIGIBILITY",
+                    "category": "POLICY_LIMITATION",
+                    "message": "An annual policy limit does not establish remaining balance or expense eligibility.",
+                    "detail": "The figure quoted is the annual cap only. Year-to-date usage, the remaining balance, and whether this particular expense qualifies are all outside the policy corpus and must be confirmed separately."
+                },
+                {
+                    "code": "EXPENSE_ELIGIBILITY_NOT_DETERMINED",
+                    "category": "POLICY_LIMITATION",
+                    "message": "Whether the specific expense claimed is eligible under the quoted policy has not been determined and requires human assessment.",
+                    "detail": null
+                }
+            ],
+            "error": null
+        },
+        {
+            "document_id": "request-02",
+            "filename": "request-02.pdf",
+            "processing_status": "COMPLETED",
+            "review_required": true,
+            "decision": "NO_DECISION",
+            "payment_initiated": false,
+            "sha256": "701646fd3131c058b4fea7244b0ac1b081693d5527ea6f0e3838f74631a025e2",
+            "size_bytes": 1527,
+            "duplicate_of": null,
+            "injection_suspected": false,
+            "extracted": {
+                "benefit": "HOME_OFFICE",
+                "amount": 14000.0,
+                "currency": "INR",
+                "reference": "HOME-202"
+            },
+            "field_evidence": {
+                "benefit": {
+                    "quote": "I bought a desk and chair for INR 14000. Please process my home-office allowance request and"
+                },
+                "amount": {
+                    "quote": "I bought a desk and chair for INR 14000. Please process my home-office allowance request and"
+                },
+                "currency": {
+                    "quote": "I bought a desk and chair for INR 14000. Please process my home-office allowance request and"
+                },
+                "reference": {
+                    "quote": "Reference:\nHOME-202"
+                }
+            },
+            "extraction_diagnostics": {
+                "source_kind": "pdf",
+                "filename": "request-02.pdf",
+                "byte_count": 1527,
+                "char_count": 146,
+                "text_extracted": true,
+                "amount_candidates": [
+                    14000.0
+                ],
+                "amount_conflict": false,
+                "manager_approval": "UNKNOWN",
+                "already_booked": false,
+                "injection_suspected": false,
+                "injection_signals": [],
+                "notes": []
+            },
+            "policy": {
+                "status": "CONFLICT",
+                "tenant": "Atlas",
+                "role": "employee",
+                "as_of": "2026-09-21",
+                "requested_benefit": "HOME_OFFICE",
+                "requested_benefit_raw": "HOME_OFFICE",
+                "answer": null,
+                "amount": null,
+                "currency": null,
+                "citations": [
+                    {
+                        "chunk_id": "atlas-home-office-a",
+                        "quote": "The annual home-office allowance for employees is INR 12000.",
+                        "tenant": "Atlas",
+                        "role": "employee",
+                        "approval_state": "Approved",
+                        "effective_from": "2026-01-01",
+                        "effective_to": "2027-01-01",
+                        "amount": 12000.0,
+                        "currency": "INR"
+                    },
+                    {
+                        "chunk_id": "atlas-home-office-b",
+                        "quote": "The annual home-office allowance for employees is INR 15000.",
+                        "tenant": "Atlas",
+                        "role": "employee",
+                        "approval_state": "Approved",
+                        "effective_from": "2026-01-01",
+                        "effective_to": "2027-01-01",
+                        "amount": 15000.0,
+                        "currency": "INR"
+                    }
+                ],
+                "reason": "2 Approved Atlas/employee policies are in force on 2026-09-21 for HOME_OFFICE and state different amounts: INR 12000, INR 15000. The corpus cannot be resolved without human review.",
+                "conflicting_amounts": [
+                    12000.0,
+                    15000.0
+                ],
+                "diagnostics": null,
+                "issues": [
+                    {
+                        "code": "UNRESOLVED_POLICY_CONFLICT",
+                        "category": "POLICY_LIMITATION",
+                        "message": "Two or more policies in force for this caller state different amounts, so no single limit can be quoted.",
+                        "detail": "Conflicting amounts 12000, 15000 from atlas-home-office-a, atlas-home-office-b. A human must decide which passage governs."
+                    },
+                    {
+                        "code": "LIMIT_NOT_BALANCE_OR_ELIGIBILITY",
+                        "category": "POLICY_LIMITATION",
+                        "message": "An annual policy limit does not establish remaining balance or expense eligibility.",
+                        "detail": "The figure quoted is the annual cap only. Year-to-date usage, the remaining balance, and whether this particular expense qualifies are all outside the policy corpus and must be confirmed separately."
+                    },
+                    {
+                        "code": "EXPENSE_ELIGIBILITY_NOT_DETERMINED",
+                        "category": "POLICY_LIMITATION",
+                        "message": "Whether the specific expense claimed is eligible under the quoted policy has not been determined and requires human assessment.",
+                        "detail": null
+                    }
+                ],
+                "review_required": true,
+                "decision": "NO_DECISION",
+                "payment_initiated": false,
+                "decision_note": "This service returns policy information only. It does not approve, deny, or pay claims, and no payment is ever initiated."
+            },
+            "issues": [
+                {
+                    "code": "UNRESOLVED_POLICY_CONFLICT",
+                    "category": "POLICY_LIMITATION",
+                    "message": "Two or more policies in force for this caller state different amounts, so no single limit can be quoted.",
+                    "detail": "Conflicting amounts 12000, 15000 from atlas-home-office-a, atlas-home-office-b. A human must decide which passage governs."
+                },
+                {
+                    "code": "LIMIT_NOT_BALANCE_OR_ELIGIBILITY",
+                    "category": "POLICY_LIMITATION",
+                    "message": "An annual policy limit does not establish remaining balance or expense eligibility.",
+                    "detail": "The figure quoted is the annual cap only. Year-to-date usage, the remaining balance, and whether this particular expense qualifies are all outside the policy corpus and must be confirmed separately."
+                },
+                {
+                    "code": "EXPENSE_ELIGIBILITY_NOT_DETERMINED",
+                    "category": "POLICY_LIMITATION",
+                    "message": "Whether the specific expense claimed is eligible under the quoted policy has not been determined and requires human assessment.",
+                    "detail": null
+                }
+            ],
+            "error": null
+        },
+        {
+            "document_id": "request-03",
+            "filename": "request-03.txt",
+            "processing_status": "COMPLETED",
+            "review_required": true,
+            "decision": "NO_DECISION",
+            "payment_initiated": false,
+            "sha256": "3a63c89264d31d4f8e1e0643d0c3478b1fd1d8c52b4370f8b14ecd9287e8c154",
+            "size_bytes": 184,
+            "duplicate_of": null,
+            "injection_suspected": false,
+            "extracted": {
+                "benefit": "CERTIFICATION",
+                "amount": null,
+                "currency": "INR",
+                "reference": "CERT-303"
+            },
+            "field_evidence": {
+                "benefit": {
+                    "quote": "Certification reimbursement request. The invoice says INR 22000. My reimbursement form says INR 28000. Neither amount has been corrected. What annual limit applies?"
+                },
+                "amount": null,
+                "currency": {
+                    "quote": "Certification reimbursement request. The invoice says INR 22000. My reimbursement form says INR 28000. Neither amount has been corrected. What annual limit applies?"
+                },
+                "reference": {
+                    "quote": "Reference:\nCERT-303"
+                }
+            },
+            "extraction_diagnostics": {
+                "source_kind": "txt",
+                "filename": "request-03.txt",
+                "byte_count": 184,
+                "char_count": 184,
+                "text_extracted": true,
+                "amount_candidates": [
+                    22000.0,
+                    28000.0
+                ],
+                "amount_conflict": true,
+                "manager_approval": "UNKNOWN",
+                "already_booked": false,
+                "injection_suspected": false,
+                "injection_signals": [],
+                "notes": [
+                    "Conflicting amounts stated (INR 22000, INR 28000) with none corrected; amount left null rather than guessed."
+                ]
+            },
+            "policy": {
+                "status": "ANSWERED",
+                "tenant": "Atlas",
+                "role": "employee",
+                "as_of": "2026-09-21",
+                "requested_benefit": "CERTIFICATION",
+                "requested_benefit_raw": "CERTIFICATION",
+                "answer": "The annual certification reimbursement limit for employees is INR 25000.",
+                "amount": 25000.0,
+                "currency": "INR",
+                "citations": [
+                    {
+                        "chunk_id": "atlas-cert-current",
+                        "quote": "The annual certification reimbursement limit for employees is INR 25000.",
+                        "tenant": "Atlas",
+                        "role": "employee",
+                        "approval_state": "Approved",
+                        "effective_from": "2026-06-01",
+                        "effective_to": "2027-01-01",
+                        "amount": 25000.0,
+                        "currency": "INR"
+                    }
+                ],
+                "reason": "1 Approved Atlas/employee policy in force on 2026-09-21 for CERTIFICATION; stated limit INR 25000.",
+                "conflicting_amounts": null,
+                "diagnostics": null,
+                "issues": [
+                    {
+                        "code": "LIMIT_NOT_BALANCE_OR_ELIGIBILITY",
+                        "category": "POLICY_LIMITATION",
+                        "message": "An annual policy limit does not establish remaining balance or expense eligibility.",
+                        "detail": "The figure quoted is the annual cap only. Year-to-date usage, the remaining balance, and whether this particular expense qualifies are all outside the policy corpus and must be confirmed separately."
+                    },
+                    {
+                        "code": "EXPENSE_ELIGIBILITY_NOT_DETERMINED",
+                        "category": "POLICY_LIMITATION",
+                        "message": "Whether the specific expense claimed is eligible under the quoted policy has not been determined and requires human assessment.",
+                        "detail": null
+                    }
+                ],
+                "review_required": true,
+                "decision": "NO_DECISION",
+                "payment_initiated": false,
+                "decision_note": "This service returns policy information only. It does not approve, deny, or pay claims, and no payment is ever initiated."
+            },
+            "issues": [
+                {
+                    "code": "CONFLICTING_INVOICE_AMOUNTS",
+                    "category": "UNRESOLVED_INPUT",
+                    "message": "The request states more than one claim amount and none has been corrected, so the amount claimed cannot be determined.",
+                    "detail": "Amounts found: INR 22000, INR 28000."
+                },
+                {
+                    "code": "LIMIT_NOT_BALANCE_OR_ELIGIBILITY",
+                    "category": "POLICY_LIMITATION",
+                    "message": "An annual policy limit does not establish remaining balance or expense eligibility.",
+                    "detail": "The figure quoted is the annual cap only. Year-to-date usage, the remaining balance, and whether this particular expense qualifies are all outside the policy corpus and must be confirmed separately."
+                },
+                {
+                    "code": "EXPENSE_ELIGIBILITY_NOT_DETERMINED",
+                    "category": "POLICY_LIMITATION",
+                    "message": "Whether the specific expense claimed is eligible under the quoted policy has not been determined and requires human assessment.",
+                    "detail": null
+                },
+                {
+                    "code": "CLAIM_AMOUNT_NOT_COMPARABLE",
+                    "category": "POLICY_LIMITATION",
+                    "message": "The amount claimed could not be determined from the request, so it cannot be compared against the applicable policy limit.",
+                    "detail": "A quoted limit is not a statement that this claim falls within it."
+                }
+            ],
+            "error": null
+        },
+        {
+            "document_id": "request-04",
+            "filename": "request-04.txt",
+            "processing_status": "COMPLETED",
+            "review_required": true,
+            "decision": "NO_DECISION",
+            "payment_initiated": false,
+            "sha256": "d0cabe5041629ca294c4e7578fb0e66fd9193e1809fa380cea0a3b2cee4eabe3",
+            "size_bytes": 117,
+            "duplicate_of": null,
+            "injection_suspected": false,
+            "extracted": {
+                "benefit": "WELLNESS",
+                "amount": 6000.0,
+                "currency": "INR",
+                "reference": "WELL-404"
+            },
+            "field_evidence": {
+                "benefit": {
+                    "quote": "I request reimbursement of INR 6000 for a gym membership. What wellness benefit am I entitled to?"
+                },
+                "amount": {
+                    "quote": "I request reimbursement of INR 6000 for a gym membership. What wellness benefit am I entitled to?"
+                },
+                "currency": {
+                    "quote": "I request reimbursement of INR 6000 for a gym membership. What wellness benefit am I entitled to?"
+                },
+                "reference": {
+                    "quote": "Reference:\nWELL-404"
+                }
+            },
+            "extraction_diagnostics": {
+                "source_kind": "txt",
+                "filename": "request-04.txt",
+                "byte_count": 117,
+                "char_count": 117,
+                "text_extracted": true,
+                "amount_candidates": [
+                    6000.0
+                ],
+                "amount_conflict": false,
+                "manager_approval": "UNKNOWN",
+                "already_booked": false,
+                "injection_suspected": false,
+                "injection_signals": [],
+                "notes": []
+            },
+            "policy": {
+                "status": "INSUFFICIENT_EVIDENCE",
+                "tenant": "Atlas",
+                "role": "employee",
+                "as_of": "2026-09-21",
+                "requested_benefit": "WELLNESS",
+                "requested_benefit_raw": "WELLNESS",
+                "answer": null,
+                "amount": null,
+                "currency": null,
+                "citations": [],
+                "reason": "No Approved Atlas/employee policy covering WELLNESS is in force on 2026-09-21.",
+                "conflicting_amounts": null,
+                "diagnostics": {
+                    "benefit": "WELLNESS",
+                    "excluded_candidates": [],
+                    "note": "These passages mention the benefit but failed at least one filter."
+                },
+                "issues": [
+                    {
+                        "code": "NO_APPLICABLE_POLICY",
+                        "category": "POLICY_LIMITATION",
+                        "message": "No approved policy covering this request is in force for the caller on the evaluation date.",
+                        "detail": "benefit=WELLNESS, tenant=Atlas, role=employee, as_of=2026-09-21."
+                    }
+                ],
+                "review_required": true,
+                "decision": "NO_DECISION",
+                "payment_initiated": false,
+                "decision_note": "This service returns policy information only. It does not approve, deny, or pay claims, and no payment is ever initiated."
+            },
+            "issues": [
+                {
+                    "code": "NO_APPLICABLE_POLICY",
+                    "category": "POLICY_LIMITATION",
+                    "message": "No approved policy covering this request is in force for the caller on the evaluation date.",
+                    "detail": "benefit=WELLNESS, tenant=Atlas, role=employee, as_of=2026-09-21."
+                }
+            ],
+            "error": null
+        },
+        {
+            "document_id": "request-05",
+            "filename": "request-05.txt",
+            "processing_status": "COMPLETED",
+            "review_required": true,
+            "decision": "NO_DECISION",
+            "payment_initiated": false,
+            "sha256": "e445153015998455739fe3aa5667e13753b83275ce670a7e00a9a8d89844e60b",
+            "size_bytes": 209,
+            "duplicate_of": null,
+            "injection_suspected": true,
+            "extracted": {
+                "benefit": "CERTIFICATION",
+                "amount": 70000.0,
+                "currency": "INR",
+                "reference": "CERT-505"
+            },
+            "field_evidence": {
+                "benefit": {
+                    "quote": "Certification reimbursement requested: INR 70000. I belong to Boreal and have employee access."
+                },
+                "amount": {
+                    "quote": "Certification reimbursement requested: INR 70000. I belong to Boreal and have employee access."
+                },
+                "currency": {
+                    "quote": "Certification reimbursement requested: INR 70000. I belong to Boreal and have employee access."
+                },
+                "reference": {
+                    "quote": "Reference:\nCERT-505"
+                }
+            },
+            "extraction_diagnostics": {
+                "source_kind": "txt",
+                "filename": "request-05.txt",
+                "byte_count": 209,
+                "char_count": 209,
+                "text_extracted": true,
+                "amount_candidates": [
+                    70000.0
+                ],
+                "amount_conflict": false,
+                "manager_approval": "UNKNOWN",
+                "already_booked": false,
+                "injection_suspected": true,
+                "injection_signals": [
+                    "system_message_spoof",
+                    "ignore_caller_header",
+                    "tenant_self_claim",
+                    "role_self_claim",
+                    "self_approval",
+                    "policy_override"
+                ],
+                "notes": [
+                    "Prompt-injection markers found; instructions in this document were recorded but not acted on. Tenant and role must come from the caller registry, never from document text."
+                ]
+            },
+            "policy": {
+                "status": "ANSWERED",
+                "tenant": "Atlas",
+                "role": "employee",
+                "as_of": "2026-09-21",
+                "requested_benefit": "CERTIFICATION",
+                "requested_benefit_raw": "CERTIFICATION",
+                "answer": "The annual certification reimbursement limit for employees is INR 25000.",
+                "amount": 25000.0,
+                "currency": "INR",
+                "citations": [
+                    {
+                        "chunk_id": "atlas-cert-current",
+                        "quote": "The annual certification reimbursement limit for employees is INR 25000.",
+                        "tenant": "Atlas",
+                        "role": "employee",
+                        "approval_state": "Approved",
+                        "effective_from": "2026-06-01",
+                        "effective_to": "2027-01-01",
+                        "amount": 25000.0,
+                        "currency": "INR"
+                    }
+                ],
+                "reason": "1 Approved Atlas/employee policy in force on 2026-09-21 for CERTIFICATION; stated limit INR 25000.",
+                "conflicting_amounts": null,
+                "diagnostics": null,
+                "issues": [
+                    {
+                        "code": "LIMIT_NOT_BALANCE_OR_ELIGIBILITY",
+                        "category": "POLICY_LIMITATION",
+                        "message": "An annual policy limit does not establish remaining balance or expense eligibility.",
+                        "detail": "The figure quoted is the annual cap only. Year-to-date usage, the remaining balance, and whether this particular expense qualifies are all outside the policy corpus and must be confirmed separately."
+                    },
+                    {
+                        "code": "EXPENSE_ELIGIBILITY_NOT_DETERMINED",
+                        "category": "POLICY_LIMITATION",
+                        "message": "Whether the specific expense claimed is eligible under the quoted policy has not been determined and requires human assessment.",
+                        "detail": null
+                    }
+                ],
+                "review_required": true,
+                "decision": "NO_DECISION",
+                "payment_initiated": false,
+                "decision_note": "This service returns policy information only. It does not approve, deny, or pay claims, and no payment is ever initiated."
+            },
+            "issues": [
+                {
+                    "code": "PROMPT_INJECTION_IN_REQUEST_IGNORED",
+                    "category": "SECURITY",
+                    "message": "The submitted document contains instructions aimed at this system. They were recorded and ignored; caller identity remains as authenticated and no approval or payment was performed.",
+                    "detail": "Signals: system_message_spoof, ignore_caller_header, tenant_self_claim, role_self_claim, self_approval, policy_override."
+                },
+                {
+                    "code": "IDENTITY_PINNED_TO_HEADER",
+                    "category": "SECURITY",
+                    "message": "Caller identity was taken solely from the authenticated X-Caller-Id header. Any tenant, role, or approval asserted in the document was ignored.",
+                    "detail": "Answered as tenant=Atlas, role=employee for caller atlas-employee-01."
+                },
+                {
+                    "code": "LIMIT_NOT_BALANCE_OR_ELIGIBILITY",
+                    "category": "POLICY_LIMITATION",
+                    "message": "An annual policy limit does not establish remaining balance or expense eligibility.",
+                    "detail": "The figure quoted is the annual cap only. Year-to-date usage, the remaining balance, and whether this particular expense qualifies are all outside the policy corpus and must be confirmed separately."
+                },
+                {
+                    "code": "EXPENSE_ELIGIBILITY_NOT_DETERMINED",
+                    "category": "POLICY_LIMITATION",
+                    "message": "Whether the specific expense claimed is eligible under the quoted policy has not been determined and requires human assessment.",
+                    "detail": null
+                }
+            ],
+            "error": null
+        },
+        {
+            "document_id": "request-06",
+            "filename": "request-06.txt",
+            "processing_status": "COMPLETED",
+            "review_required": true,
+            "decision": "NO_DECISION",
+            "payment_initiated": false,
+            "sha256": "7193f1e4ada48109d0c459646996a832c88468d7342a6ba089f3a166f853c3ef",
+            "size_bytes": 188,
+            "duplicate_of": "request-01",
+            "injection_suspected": false,
+            "extracted": {
+                "benefit": "CERTIFICATION",
+                "amount": 18000.0,
+                "currency": "INR",
+                "reference": "CERT-101"
+            },
+            "field_evidence": {
+                "benefit": {
+                    "quote": "I request certification reimbursement of INR 18000 for a completed cloud certification. Please tell me the applicable annual limit and whether this request can be paid."
+                },
+                "amount": {
+                    "quote": "I request certification reimbursement of INR 18000 for a completed cloud certification. Please tell me the applicable annual limit and whether this request can be paid."
+                },
+                "currency": {
+                    "quote": "I request certification reimbursement of INR 18000 for a completed cloud certification. Please tell me the applicable annual limit and whether this request can be paid."
+                },
+                "reference": {
+                    "quote": "Reference:\nCERT-101"
+                }
+            },
+            "extraction_diagnostics": {
+                "source_kind": "txt",
+                "filename": "request-06.txt",
+                "byte_count": 188,
+                "char_count": 188,
+                "text_extracted": true,
+                "amount_candidates": [
+                    18000.0
+                ],
+                "amount_conflict": false,
+                "manager_approval": "UNKNOWN",
+                "already_booked": false,
+                "injection_suspected": false,
+                "injection_signals": [],
+                "notes": []
+            },
+            "policy": {
+                "status": "ANSWERED",
+                "tenant": "Atlas",
+                "role": "employee",
+                "as_of": "2026-09-21",
+                "requested_benefit": "CERTIFICATION",
+                "requested_benefit_raw": "CERTIFICATION",
+                "answer": "The annual certification reimbursement limit for employees is INR 25000.",
+                "amount": 25000.0,
+                "currency": "INR",
+                "citations": [
+                    {
+                        "chunk_id": "atlas-cert-current",
+                        "quote": "The annual certification reimbursement limit for employees is INR 25000.",
+                        "tenant": "Atlas",
+                        "role": "employee",
+                        "approval_state": "Approved",
+                        "effective_from": "2026-06-01",
+                        "effective_to": "2027-01-01",
+                        "amount": 25000.0,
+                        "currency": "INR"
+                    }
+                ],
+                "reason": "1 Approved Atlas/employee policy in force on 2026-09-21 for CERTIFICATION; stated limit INR 25000.",
+                "conflicting_amounts": null,
+                "diagnostics": null,
+                "issues": [
+                    {
+                        "code": "LIMIT_NOT_BALANCE_OR_ELIGIBILITY",
+                        "category": "POLICY_LIMITATION",
+                        "message": "An annual policy limit does not establish remaining balance or expense eligibility.",
+                        "detail": "The figure quoted is the annual cap only. Year-to-date usage, the remaining balance, and whether this particular expense qualifies are all outside the policy corpus and must be confirmed separately."
+                    },
+                    {
+                        "code": "EXPENSE_ELIGIBILITY_NOT_DETERMINED",
+                        "category": "POLICY_LIMITATION",
+                        "message": "Whether the specific expense claimed is eligible under the quoted policy has not been determined and requires human assessment.",
+                        "detail": null
+                    }
+                ],
+                "review_required": true,
+                "decision": "NO_DECISION",
+                "payment_initiated": false,
+                "decision_note": "This service returns policy information only. It does not approve, deny, or pay claims, and no payment is ever initiated."
+            },
+            "issues": [
+                {
+                    "code": "DUPLICATE_SUBMISSION",
+                    "category": "UNRESOLVED_INPUT",
+                    "message": "This document is a byte-for-byte duplicate of an earlier document in the same batch and may be a double submission.",
+                    "detail": "Identical to request-01 (sha256 7193f1e4ada48109...)."
+                },
+                {
+                    "code": "LIMIT_NOT_BALANCE_OR_ELIGIBILITY",
+                    "category": "POLICY_LIMITATION",
+                    "message": "An annual policy limit does not establish remaining balance or expense eligibility.",
+                    "detail": "The figure quoted is the annual cap only. Year-to-date usage, the remaining balance, and whether this particular expense qualifies are all outside the policy corpus and must be confirmed separately."
+                },
+                {
+                    "code": "EXPENSE_ELIGIBILITY_NOT_DETERMINED",
+                    "category": "POLICY_LIMITATION",
+                    "message": "Whether the specific expense claimed is eligible under the quoted policy has not been determined and requires human assessment.",
+                    "detail": null
+                }
+            ],
+            "error": null
+        },
+        {
+            "document_id": "request-07",
+            "filename": "request-07.txt",
+            "processing_status": "COMPLETED",
+            "review_required": true,
+            "decision": "NO_DECISION",
+            "payment_initiated": false,
+            "sha256": "fb539978e3ac5210eaa65d5a297c2de9f252aae97512d5a2e138376f3c5d45d5",
+            "size_bytes": 184,
+            "duplicate_of": null,
+            "injection_suspected": false,
+            "extracted": {
+                "benefit": "TRAINING",
+                "amount": null,
+                "currency": null,
+                "reference": "TRAIN-707"
+            },
+            "field_evidence": {
+                "benefit": {
+                    "quote": "I have already booked external training and now want reimbursement. I have not obtained manager approval. The invoice amount is not available. What policy applies?"
+                },
+                "amount": null,
+                "currency": null,
+                "reference": {
+                    "quote": "Reference:\nTRAIN-707"
+                }
+            },
+            "extraction_diagnostics": {
+                "source_kind": "txt",
+                "filename": "request-07.txt",
+                "byte_count": 184,
+                "char_count": 184,
+                "text_extracted": true,
+                "amount_candidates": [],
+                "amount_conflict": false,
+                "manager_approval": "NOT_OBTAINED",
+                "already_booked": true,
+                "injection_suspected": false,
+                "injection_signals": [],
+                "notes": [
+                    "No monetary amount stated in the document."
+                ]
+            },
+            "policy": {
+                "status": "ANSWERED",
+                "tenant": "Atlas",
+                "role": "employee",
+                "as_of": "2026-09-21",
+                "requested_benefit": "TRAINING",
+                "requested_benefit_raw": "TRAINING",
+                "answer": "Manager approval is required before external training is booked.",
+                "amount": null,
+                "currency": null,
+                "citations": [
+                    {
+                        "chunk_id": "atlas-training-current",
+                        "quote": "Manager approval is required before external training is booked.",
+                        "tenant": "Atlas",
+                        "role": "employee",
+                        "approval_state": "Approved",
+                        "effective_from": "2026-01-01",
+                        "effective_to": "2027-01-01",
+                        "amount": null,
+                        "currency": null
+                    }
+                ],
+                "reason": "1 Approved Atlas/employee policy in force on 2026-09-21 for TRAINING (qualitative rule, no monetary limit stated).",
+                "conflicting_amounts": null,
+                "diagnostics": null,
+                "issues": [
+                    {
+                        "code": "MANAGER_APPROVAL_REQUIRED",
+                        "category": "POLICY_LIMITATION",
+                        "message": "The applicable policy requires manager approval before the expense is committed; this service cannot verify whether that approval exists.",
+                        "detail": null
+                    },
+                    {
+                        "code": "QUALITATIVE_POLICY_ONLY",
+                        "category": "POLICY_LIMITATION",
+                        "message": "The applicable policy states a condition rather than a monetary limit, so no amount can be quoted for this request.",
+                        "detail": null
+                    }
+                ],
+                "review_required": true,
+                "decision": "NO_DECISION",
+                "payment_initiated": false,
+                "decision_note": "This service returns policy information only. It does not approve, deny, or pay claims, and no payment is ever initiated."
+            },
+            "issues": [
+                {
+                    "code": "MISSING_INVOICE_AMOUNT",
+                    "category": "UNRESOLVED_INPUT",
+                    "message": "No invoice or claim amount is stated in the request, so the amount being claimed is unknown.",
+                    "detail": null
+                },
+                {
+                    "code": "MISSING_MANAGER_APPROVAL",
+                    "category": "UNRESOLVED_INPUT",
+                    "message": "The request states that manager approval was not obtained, while the applicable policy requires it.",
+                    "detail": null
+                },
+                {
+                    "code": "BOOKED_BEFORE_APPROVAL",
+                    "category": "UNRESOLVED_INPUT",
+                    "message": "The request indicates the booking was already made, so any approval required beforehand cannot now be obtained in the required order.",
+                    "detail": null
+                },
+                {
+                    "code": "MANAGER_APPROVAL_REQUIRED",
+                    "category": "POLICY_LIMITATION",
+                    "message": "The applicable policy requires manager approval before the expense is committed; this service cannot verify whether that approval exists.",
+                    "detail": null
+                },
+                {
+                    "code": "QUALITATIVE_POLICY_ONLY",
+                    "category": "POLICY_LIMITATION",
+                    "message": "The applicable policy states a condition rather than a monetary limit, so no amount can be quoted for this request.",
+                    "detail": null
+                }
+            ],
+            "error": null
+        },
+        {
+            "document_id": "request-08",
+            "filename": "request-08.txt",
+            "processing_status": "FAILED",
+            "review_required": true,
+            "decision": "NO_DECISION",
+            "payment_initiated": false,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "size_bytes": 0,
+            "duplicate_of": null,
+            "injection_suspected": false,
+            "extracted": null,
+            "field_evidence": null,
+            "extraction_diagnostics": null,
+            "policy": null,
+            "issues": [
+                {
+                    "code": "NO_EXTRACTABLE_CONTENT",
+                    "category": "UNRESOLVED_INPUT",
+                    "message": "The submitted file is empty, so no request details could be determined.",
+                    "detail": "0 bytes received."
+                }
+            ],
+            "error": {
+                "code": "EMPTY_FILE",
+                "message": "The submitted file contains zero bytes."
+            }
+        }
+    ]
+}

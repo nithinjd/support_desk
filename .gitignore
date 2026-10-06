@@ -1,0 +1,35 @@
+# ---------------------------------------------------------------------------
+# Build output and environments
+# ---------------------------------------------------------------------------
+python-service/.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+spring-boot-service/target/
+*.class
+
+# ---------------------------------------------------------------------------
+# Editor and OS
+# ---------------------------------------------------------------------------
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+
+# Local agent settings
+.claude/
+
+# ---------------------------------------------------------------------------
+# Local notes and scratch - not part of the submission
+# ---------------------------------------------------------------------------
+INTERVIEW_PREP.pdf
+REQUEST_LIFECYCLE.pdf
+make_interview_prep_pdf.py
+make_walkthrough_pdf.py
+manual_test.ps1
+out.json
+batchout.json
+demo_responses_*/
+dr_*/

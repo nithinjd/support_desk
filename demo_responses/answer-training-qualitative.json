@@ -1,0 +1,45 @@
+{
+    "status": "ANSWERED",
+    "tenant": "Atlas",
+    "role": "employee",
+    "as_of": "2026-09-21",
+    "requested_benefit": "TRAINING",
+    "requested_benefit_raw": "Do I need manager approval before booking external training?",
+    "answer": "Manager approval is required before external training is booked.",
+    "amount": null,
+    "currency": null,
+    "citations": [
+        {
+            "chunk_id": "atlas-training-current",
+            "quote": "Manager approval is required before external training is booked.",
+            "tenant": "Atlas",
+            "role": "employee",
+            "approval_state": "Approved",
+            "effective_from": "2026-01-01",
+            "effective_to": "2027-01-01",
+            "amount": null,
+            "currency": null
+        }
+    ],
+    "reason": "1 Approved Atlas/employee policy in force on 2026-09-21 for TRAINING (qualitative rule, no monetary limit stated).",
+    "conflicting_amounts": null,
+    "diagnostics": null,
+    "issues": [
+        {
+            "code": "MANAGER_APPROVAL_REQUIRED",
+            "category": "POLICY_LIMITATION",
+            "message": "The applicable policy requires manager approval before the expense is committed; this service cannot verify whether that approval exists.",
+            "detail": null
+        },
+        {
+            "code": "QUALITATIVE_POLICY_ONLY",
+            "category": "POLICY_LIMITATION",
+            "message": "The applicable policy states a condition rather than a monetary limit, so no amount can be quoted for this request.",
+            "detail": null
+        }
+    ],
+    "review_required": true,
+    "decision": "NO_DECISION",
+    "payment_initiated": false,
+    "decision_note": "This service returns policy information only. It does not approve, deny, or pay claims, and no payment is ever initiated."
+}

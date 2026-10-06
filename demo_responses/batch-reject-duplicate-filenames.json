@@ -1,0 +1,7 @@
+{
+    "timestamp": "2026-10-05T18:03:23.050268100Z",
+    "status": 400,
+    "error": "Bad Request",
+    "message": "duplicate filenames in metadata.documents: request-01.txt",
+    "path": "/batches"
+}

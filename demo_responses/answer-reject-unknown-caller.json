@@ -1,0 +1,8 @@
+{
+    "timestamp": "2026-10-05T18:03:19.614469300Z",
+    "status": 401,
+    "error": "Unauthorized",
+    "message": "Unknown caller id.",
+    "path": "/answer",
+    "presented_caller_id": "atlas-admin-99"
+}

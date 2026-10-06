@@ -1,0 +1,10 @@
+{
+    "timestamp": "2026-10-05T18:03:20.386323600Z",
+    "status": 400,
+    "error": "Bad Request",
+    "message": "Request validation failed",
+    "path": "/answer",
+    "details": [
+        "asOf: as_of must be a date in YYYY-MM-DD format"
+    ]
+}

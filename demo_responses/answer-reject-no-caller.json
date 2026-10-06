@@ -1,0 +1,7 @@
+{
+    "timestamp": "2026-10-05T18:03:17.695580900Z",
+    "status": 401,
+    "error": "Unauthorized",
+    "message": "Missing required X-Caller-Id header.",
+    "path": "/answer"
+}

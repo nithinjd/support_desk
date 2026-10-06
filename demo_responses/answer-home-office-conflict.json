@@ -1,0 +1,65 @@
+{
+    "status": "CONFLICT",
+    "tenant": "Atlas",
+    "role": "employee",
+    "as_of": "2026-09-21",
+    "requested_benefit": "HOME_OFFICE",
+    "requested_benefit_raw": "What is my home-office allowance?",
+    "answer": null,
+    "amount": null,
+    "currency": null,
+    "citations": [
+        {
+            "chunk_id": "atlas-home-office-a",
+            "quote": "The annual home-office allowance for employees is INR 12000.",
+            "tenant": "Atlas",
+            "role": "employee",
+            "approval_state": "Approved",
+            "effective_from": "2026-01-01",
+            "effective_to": "2027-01-01",
+            "amount": 12000.0,
+            "currency": "INR"
+        },
+        {
+            "chunk_id": "atlas-home-office-b",
+            "quote": "The annual home-office allowance for employees is INR 15000.",
+            "tenant": "Atlas",
+            "role": "employee",
+            "approval_state": "Approved",
+            "effective_from": "2026-01-01",
+            "effective_to": "2027-01-01",
+            "amount": 15000.0,
+            "currency": "INR"
+        }
+    ],
+    "reason": "2 Approved Atlas/employee policies are in force on 2026-09-21 for HOME_OFFICE and state different amounts: INR 12000, INR 15000. The corpus cannot be resolved without human review.",
+    "conflicting_amounts": [
+        12000.0,
+        15000.0
+    ],
+    "diagnostics": null,
+    "issues": [
+        {
+            "code": "UNRESOLVED_POLICY_CONFLICT",
+            "category": "POLICY_LIMITATION",
+            "message": "Two or more policies in force for this caller state different amounts, so no single limit can be quoted.",
+            "detail": "Conflicting amounts 12000, 15000 from atlas-home-office-a, atlas-home-office-b. A human must decide which passage governs."
+        },
+        {
+            "code": "LIMIT_NOT_BALANCE_OR_ELIGIBILITY",
+            "category": "POLICY_LIMITATION",
+            "message": "An annual policy limit does not establish remaining balance or expense eligibility.",
+            "detail": "The figure quoted is the annual cap only. Year-to-date usage, the remaining balance, and whether this particular expense qualifies are all outside the policy corpus and must be confirmed separately."
+        },
+        {
+            "code": "EXPENSE_ELIGIBILITY_NOT_DETERMINED",
+            "category": "POLICY_LIMITATION",
+            "message": "Whether the specific expense claimed is eligible under the quoted policy has not been determined and requires human assessment.",
+            "detail": null
+        }
+    ],
+    "review_required": true,
+    "decision": "NO_DECISION",
+    "payment_initiated": false,
+    "decision_note": "This service returns policy information only. It does not approve, deny, or pay claims, and no payment is ever initiated."
+}

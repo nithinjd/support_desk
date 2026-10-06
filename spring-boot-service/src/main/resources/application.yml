@@ -1,0 +1,34 @@
+server:
+  port: 8080
+  error:
+    include-message: always
+
+spring:
+  application:
+    name: marlabs-gateway
+
+  jackson:
+    # The public contract is snake_case (as_of, duplicate_of,
+    # processing_status) while the Java side stays camelCase.
+    property-naming-strategy: SNAKE_CASE
+    # Null fields such as duplicate_of must still appear in responses, so a
+    # client can tell "not a duplicate" from "field not implemented".
+    default-property-inclusion: always
+    deserialization:
+      fail-on-unknown-properties: false
+
+  servlet:
+    multipart:
+      enabled: true
+      # Matches the 10 MB cap enforced by the Python extractor.
+      max-file-size: 10MB
+      max-request-size: 50MB
+
+policy-service:
+  base-url: http://localhost:8000
+  # 5 second budget, applied to both connect and read.
+  timeout: 5s
+
+logging:
+  level:
+    com.marlabs.gateway: INFO
