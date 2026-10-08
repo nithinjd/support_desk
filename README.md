@@ -1,4 +1,4 @@
-# Marlabs GenAI Assessment — Employee policy and reimbursement triage
+# Employee policy and reimbursement triage
 
 A Spring Boot public API backed by a private Python service. Spring Boot owns
 caller identity, request validation and the public response; Python owns
